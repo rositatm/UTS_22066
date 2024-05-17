@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Gambar di bagian atas -->
+
+    <!-- Title di bawah gambar -->
+    <ImageView
+        android:id="@+id/movieImageView"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/spiderman" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_below="@id/movieImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spider-Man: No Way Home"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Watch for (Adult/Kids) -->
+    <TextView
+        android:id="@+id/watchForTextView"
+        android:layout_below="@id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watch for"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <RadioGroup
+        android:id="@+id/watchForRadioGroup"
+        android:layout_below="@id/watchForTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp">
+
+        <RadioButton
+            android:id="@+id/adultRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adult (17+)" />
+
+        <RadioButton
+            android:id="@+id/kidsRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kids" />
+    </RadioGroup>
+
+    <!-- Genre -->
+    <TextView
+        android:id="@+id/genreTextView"
+        android:layout_below="@id/watchForRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:layout_below="@id/genreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp">
+
+        <CheckBox
+            android:id="@+id/thrillerCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thriller" />
+
+        <CheckBox
+            android:id="@+id/horrorCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horror" />
+
+        <CheckBox
+            android:id="@+id/actionCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Action" />
+
+        <CheckBox
+            android:id="@+id/romanceCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Romance" />
+
+        <CheckBox
+            android:id="@+id/comedyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comedy" />
+
+        <CheckBox
+            android:id="@+id/fantasyCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fantasy" />
+    </LinearLayout>
+
+    <!-- Year Spinner -->
+    <TextView
+        android:id="@+id/yearTextView"
+        android:layout_below="@id/genreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="16dp" />
+
+    <Spinner
+        android:id="@+id/yearSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yearTextView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Duration Spinner -->
+    <TextView
+        android:id="@+id/durationTextView"
+        android:layout_below="@id/yearSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration (Hour)"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <Spinner
+        android:id="@+id/durationHourSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/durationTextView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/durationMinuteTextView"
+        android:layout_below="@id/durationHourSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration (Minutes)"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <Spinner
+        android:id="@+id/durationMinuteSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/durationMinuteTextView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- OK Button -->
+    <Button
+        android:id="@+id/okButton"
+        android:layout_below="@id/durationMinuteSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>
